@@ -1,0 +1,34 @@
+{
+  "name": "boundary-value-analytics",
+  "version": "1.0.0",
+  "description": "A Playwright-based utility for automated Boundary Value Analysis (BVA) testing, supporting both integers and floating-point numbers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test" 
+  },
+  "keywords": [
+    "boundary-value-analysis",
+    "BVA",
+    "playwright",
+    "automated-testing",
+    "QA",
+    "testing",
+    "boundary-testing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iniyavans/boundary-value-analytics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iniyavans/boundary-value-analytics/issues"
+  },
+  "homepage": "https://github.com/iniyavans/boundary-value-analytics#readme",
+  "author": "Iniyavan",
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/test": "^1.36.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
