@@ -8,7 +8,7 @@ test.describe('Boundary Value Analysis Tests', () => {
   test('Boundary value testing', async ({ page }) => {
 
     // Navigate to the application (replace with actual URL)
-    await page.goto('http://127.0.0.1:5500/');  // Replace with your local or actual URL
+    await page.goto('https://66f6ef1f90b096b22adcf04d--precious-monstera-795d46.netlify.app/');  // Replace with your local or actual URL
 
     // Specify the element XPath and boundary values
     const minValue = 18;
