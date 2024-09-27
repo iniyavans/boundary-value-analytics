@@ -1,7 +1,7 @@
 // const { bvaTest } = require('../bva');
 const { test } = require('@playwright/test');
 // Import the function from your package
-const { bvaTest } = require('boundary-value-analytics');
+const { bvaTest } = require('../lib/bvaTest');
 
 test.describe('Boundary Value Analysis Tests', () => {
 
