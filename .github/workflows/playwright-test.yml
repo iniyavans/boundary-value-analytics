@@ -1,0 +1,46 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - run: npm ci
+
+    # Install Playwright dependencies (for browsers and OS-specific dependencies)
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+
+    # Build the project (if applicable)
+    - run: npm run build --if-present
+
+    # Run Playwright tests
+    - name: Run Playwright Tests
+      run: npm test
+
+    # Optionally, upload test results for later inspection
+    - name: Upload Playwright Test Results
+      if: failure()  # Only upload on test failures
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-results
+        path: playwright-report/
