@@ -53,7 +53,8 @@ test('Boundary Value Analysis Test', async ({ page }) => {
   const maxValue = 10;
   const elementXPath = '//input[@id="numberInput"]';
   const submitXPath = '//button[@id="submit"]';
-  const successXPath = null;  // Optional: Set to null if no success message element
+  const successXPath = "//div[@class='success-message']";  // XPath of success message
+  // const successXPath = null;  // Optional: Set to null if no success message element
   const errorXPath = '//div[@id="errorMessage"]';
   
   await bvaTest(minValue, maxValue, elementXPath, submitXPath, successXPath, errorXPath, page);
