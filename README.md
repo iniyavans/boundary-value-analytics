@@ -6,7 +6,7 @@ This package provides a helper function `bvaTest` to automate `Boundary Value An
 **Boundary Value Analysis** is a testing technique used to identify defects by focusing on edge cases at the boundaries of input ranges. These boundaries are more likely to have issues, as developers may overlook extreme values during coding.
 ![Boundary Value Analysis (BVA)](https://www.lotus-qa.com/wp-content/uploads/2022/07/Boundary-value-analysis-test-case-design-technique.png)
 ##### The key boundaries tested are:
-- **Lower Boundary:** The minimum value the input field should accept.
+- **Lower Boundary:** The minimum value the input field should accept..
 - **Upper Boundary:** The maximum value the input field should accept.
 - **Just Below Lower Boundary:** A value slightly smaller than the minimum boundary, which should be rejected.
 - **Just Above Lower Boundary:** A value slightly greater than the minimum boundary, which should be accepted.
